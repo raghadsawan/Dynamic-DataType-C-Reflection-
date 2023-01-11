@@ -1,4 +1,9 @@
 <!-- Object To Dictionary
+ 
+--what is reflection ? 
+Reflection is useful when you need to perform tasks that can't be accomplished using the compile-time type information, such as:
+
+The reflection allows to get information about type and construct it dynamically, it can be used to discover the members of an object, such as methods, properties, and fields, and then invoke them at runtime.
 
 public static Dictionary<string, string> ObjectAttributeToDictionary<T>(T obj)
   {
@@ -39,6 +44,7 @@ public static Dictionary<string, string> ObjectAttributeToDictionary<T>(T obj)
 
         return result;
     }
+    
     public static void AddProperty(ExpandoObject expando, string propertyName, object propertyValue)
     {
       var expandoDict = expando as IDictionary<string, object>;
